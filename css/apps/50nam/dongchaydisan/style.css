@@ -1,0 +1,40 @@
+
+/* Source layout is retained; only SPA controls and lifecycle states are added. */
+.dcd-screen{position:relative;isolation:isolate;min-height:100vh;font-family:Inter,sans-serif;overflow-x:clip}
+.dcd-screen [hidden]{display:none!important}
+.dcd-screen .fixed.inset-0{pointer-events:none}
+.dcd-screen .dcd-toolbar{position:fixed;bottom:2vw;right:2vw;z-index:50}
+.dcd-screen.dcd-home .dcd-toolbar button{padding:1.66vw 3.33vw !important;font-size:3.05vw !important;color:#fff !important;}
+.dcd-screen .dcd-chapter{min-height:44px;text-decoration:none}
+.dcd-screen .indicator-dot{cursor:pointer;border:0}
+.dcd-screen .indicator-dot.dcd-active{width:6vw!important;background:#993f4266}
+.dcd-screen #carousel{position:relative}
+@media(prefers-reduced-motion:reduce){.dcd-screen *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.dcd-screen{line-height:1.5;overflow-wrap:normal}
+.dcd-screen .dcd-footer-button{display:flex !important;align-items:center !important;justify-content:center !important;gap:.6vw !important;padding:1.2vw 2.4vw !important;min-height:44px !important;border:1px solid #d4af3733 !important;border-radius:999px !important;background:#5c000066 !important;backdrop-filter:blur(12px) !important;color:#d4af37 !important;font-family:'Public Sans',sans-serif !important;font-size:1.8vw !important;font-weight:700 !important;letter-spacing:.05em !important;text-transform:uppercase !important;text-decoration:none !important;cursor:pointer !important;}
+.dcd-screen .dcd-toolbar button{display:inline-flex !important;min-height:44px !important;align-items:center !important;padding:1.2vw 2.4vw !important;border:1px solid #ffffff33 !important;border-radius:999px !important;background:#5c000066 !important;backdrop-filter:blur(12px) !important;color:#d4af37cc !important;font:700 1.8vw 'Public Sans',sans-serif !important;cursor:pointer !important;}
+.dcd-screen.dcd-home .dcd-toolbar button{padding:1.66vw 3.33vw !important;font-size:3.05vw !important;color:#fff !important;}
+.dcd-screen .dcd-page-footer{position:fixed;z-index:50;bottom:2vw;left:1.5vw;right:22vw;display:flex;justify-content:space-between;align-items:center;gap:16px;pointer-events:none}
+.dcd-screen .dcd-page-footer a{pointer-events:auto}
+.dcd-screen.dcd-home main>footer>.dcd-exhibitions-button{border-radius:.5rem;height:clamp(32px,6vw,96px);font-size:2.2vw;letter-spacing:.025em;margin-top:16px}
+.dcd-screen a:focus-visible,.dcd-screen button:focus-visible{outline:3px solid #f9e37a;outline-offset:4px}
+
+.dcd-screen h1,.dcd-screen h2,.dcd-screen h3{line-height:inherit}
+
+.dcd-screen{font-family:Inter,sans-serif!important}
+.dcd-screen.dcd-home main>footer>.dcd-exhibitions-button{position:fixed;bottom:2vw;left:2vw;z-index:50;width:auto;height:auto;border-radius:999px;font-size:1.8vw;margin:0!important}
+
+.dcd-screen .indicator-dot{width:1.6vw!important;height:1.6vw!important;background:#dbc0bf!important}
+.dcd-screen .indicator-dot.dcd-active{width:6vw!important;background:#993f4266!important}
+
+@media(prefers-reduced-motion:reduce){.dcd-screen .animate-bounce{animation:none!important}}
+@keyframes dcd-jumpBack{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.dcd-screen .dcd-page-footer>.dcd-footer-button{animation:dcd-jumpBack 2s infinite ease-in-out!important}
+@media(prefers-reduced-motion:reduce){.dcd-screen .dcd-page-footer>.dcd-footer-button{animation:none!important}}
+@keyframes dcd-scroll-bounce{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-10px)}}
+.dcd-screen .dcd-scroll-hint{left:50%;transform:translate(-50%,0);animation:dcd-scroll-bounce 1s infinite ease-in-out!important}
+@media(prefers-reduced-motion:reduce){.dcd-screen .dcd-scroll-hint{animation:none!important}}
+.dcd-screen #carousel.dcd-carousel-jumping{scroll-behavior:auto!important;scroll-snap-type:none!important}
+.dcd-screen:not(.dcd-home) .dcd-page-footer>.dcd-footer-button{box-sizing:border-box!important;width:var(--dcd-language-width,auto)!important;height:var(--dcd-language-height,auto)!important;padding:0!important;font-size:1.8vw!important;line-height:1.5!important;letter-spacing:normal!important;text-transform:none!important;gap:.3vw!important}
+.dcd-screen .dcd-page-footer>.dcd-footer-button .material-symbols-outlined{font-size:inherit!important;line-height:1!important}

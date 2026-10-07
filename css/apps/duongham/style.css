@@ -1,0 +1,205 @@
+.duongham-screen {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: clamp(100px, 7vh, 135px);
+}
+
+.duongham-screen .bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../../public/elements/duongham/bg2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.duongham-screen .logo {
+    width: 30%;
+    margin: auto;
+    padding-top: 2vh;
+}
+
+.duongham-screen .logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.duongham-screen h1 {
+    color: #ec2227;
+    font-size: clamp(18px, 4vw, 52px);
+    font-weight: 700;
+    text-align: center;
+}
+
+.duongham-screen .readmore-wrap {
+    width: 90%;
+    max-width: 90%;
+    margin: auto;
+    font-size: clamp(12px, 2vw, 22px);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.duongham-screen .readmore-text {
+    display: -webkit-box;
+    overflow: hidden;
+    margin-bottom: 0.8vh;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+}
+
+.duongham-screen .readmore-wrap.show .readmore-text {
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+}
+
+.duongham-screen .readmore-btn {
+    display: block;
+    margin-left: 6px;
+    color: #2563eb;
+    cursor: pointer;
+    font-size: clamp(14px, 1.2vw, 18px);
+    font-weight: 600;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.duongham-screen .duongham-language {
+    position: fixed;
+    right: 3%;
+    bottom: clamp(25px, 10vh, 100px);
+    z-index: 100;
+    width: clamp(50px, 10vw, 100px);
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.duongham-screen .duongham-language img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.duongham-screen .box {
+    width: 80%;
+    margin: auto;
+    padding: 2vw 0;
+    text-align: center;
+}
+
+.duongham-screen .box:last-child {
+    margin-bottom: 5vh;
+}
+
+.duongham-screen .box p {
+    padding-top: 1vw;
+    font-size: clamp(8px, 1.2vw, 18px);
+}
+
+.duongham-screen .box img {
+    padding: clamp(6px, 1vw, 12px);
+    background: conic-gradient(from var(--angle), cyan, hotpink, #341f97, cyan);
+    box-shadow: 0 0 2vw 1vw rgba(0, 0, 0, 0.5);
+    animation: duongham-rotate 10s linear infinite;
+}
+
+.duongham-screen #dataMap h2 {
+    color: #ec2227;
+    font-size: clamp(14px, 3vw, 28px);
+    font-weight: 700;
+    text-align: center;
+}
+
+.duongham-screen .nav-bar {
+    position: fixed;
+    bottom: -1px;
+    z-index: 1000;
+    width: 100%;
+}
+
+.duongham-screen .nav-decor {
+    height: clamp(12px, 2vh, 30px);
+    border-radius: clamp(10px, 2vw, 20px) clamp(10px, 2vw, 20px) 0 0;
+    background: #d9d9d9;
+}
+
+.duongham-screen .nav-list {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    margin: 0;
+    padding: clamp(6px, 1vh, 12px) 0;
+    list-style: none;
+    background: #fff;
+}
+
+.duongham-screen .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    cursor: pointer;
+    font-size: clamp(11px, 2.6vw, 15px);
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.15s ease;
+}
+
+.duongham-screen .nav-item img {
+    width: 20%;
+    margin-bottom: clamp(2px, 0.4vh, 6px);
+}
+
+.duongham-screen .nav-item p {
+    margin: 0;
+    font-size: clamp(8px, 1.2vw, 12px);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.duongham-screen .nav-item.active {
+    color: #0d6efd;
+}
+
+.duongham-screen .lang-eng,
+.duongham-screen[data-lang="vi"] .lang-eng-inline,
+.duongham-screen[data-lang="en"] .lang-vi,
+.duongham-screen[data-lang="en"] .lang-vi-inline {
+    display: none;
+}
+
+.duongham-screen[data-lang="en"] .lang-eng {
+    display: block;
+}
+
+.duongham-screen[data-lang="en"] .lang-eng-inline {
+    display: inline;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes duongham-rotate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+@media (orientation: landscape) {
+    .duongham-screen .logo {
+        width: 15%;
+    }
+
+    .duongham-screen .duongham-language {
+        bottom: clamp(50px, 20vh, 100px);
+        width: clamp(50px, 5vw, 100px);
+    }
+}

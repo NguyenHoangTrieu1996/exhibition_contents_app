@@ -1,0 +1,132 @@
+{
+  "note": "Copied unchanged from local source; null version means not declared in source. Files are not automatically loaded.",
+  "files": [
+    {
+      "library": "bootstrap",
+      "version": "5.3.8",
+      "source": "D:\\Documents For Work\\TamQuanDaiDe\\css\\bootstrap5.3.8\\bootstrap.min.css",
+      "file": "css/libs/bootstrap/bootstrap.min.css",
+      "sha256": "d85327d99c7a3ee1f9b5d0500d1370acea3ad2db39c163c2f51f232baedbdede"
+    },
+    {
+      "library": "bootstrap",
+      "version": "5.3.8",
+      "source": "D:\\Documents For Work\\TamQuanDaiDe\\css\\bootstrap5.3.8\\bootstrap.min.css.map",
+      "file": "css/libs/bootstrap/bootstrap.min.css.map",
+      "sha256": "48144faf6aa0fb3cd2ce748d9730238f888f4ab715f05dabd1c9af2c5671988a"
+    },
+    {
+      "library": "bootstrap",
+      "version": "5.3.8",
+      "source": "D:\\Documents For Work\\TamQuanDaiDe\\js\\bootstrap5.3.8\\bootstrap.bundle.min.js",
+      "file": "js/libs/bootstrap/bootstrap.bundle.min.js",
+      "sha256": "e4fd49181388c48ec5040bd3fe66f57c29c8e67fcd8502b3354b96ec7ab47cc7"
+    },
+    {
+      "library": "bootstrap",
+      "version": "5.3.8",
+      "source": "D:\\Documents For Work\\TamQuanDaiDe\\js\\bootstrap5.3.8\\bootstrap.bundle.min.js.map",
+      "file": "js/libs/bootstrap/bootstrap.bundle.min.js.map",
+      "sha256": "c61123e58cc0a4b65d737ba070c485911b3dbec6d7b802bdf6628395abd9c08b"
+    },
+    {
+      "library": "jquery",
+      "version": "3.6.1",
+      "source": "D:\\Documents For Work\\TamQuanDaiDe\\js\\counter\\jquery.min.js",
+      "file": "js/libs/jquery/jquery.min.js",
+      "sha256": "4cd356041c1765b1b544e524beb52e8872a249b2634f8b62d38f2f837ff4f84a"
+    },
+    {
+      "library": "animate.css",
+      "version": "4.1.1",
+      "source": "D:\\Documents For Work\\TamQuanDaiDe\\css\\animate4.1.1\\animate.min.css",
+      "file": "css/libs/animate/animate.min.css",
+      "sha256": "a61e123314188bd0453320008e01b4bbb665bee09039f4cbd9bef44de410ce67"
+    },
+    {
+      "library": "fontawesome-free",
+      "version": "7.1.0",
+      "source": "D:\\Documents For Work\\TamQuanDaiDe\\css\\fontawesome7.1.0\\css\\all.min.css",
+      "file": "css/libs/fontawesome/css/all.min.css",
+      "sha256": "e2b4c87e8e464138bfed426aa3250940acf15bc54dfd8047df5f82cbebd3663e"
+    },
+    {
+      "library": "fontawesome-free",
+      "version": "7.1.0",
+      "source": "D:\\Documents For Work\\TamQuanDaiDe\\css\\fontawesome7.1.0\\LICENSE.txt",
+      "file": "css/libs/fontawesome/LICENSE.txt",
+      "sha256": "329f24fdba0c57714d7d202d30a74767feac6907685ee24f0abbf1bd47581a07"
+    },
+    {
+      "library": "beerslider",
+      "version": null,
+      "source": "D:\\Documents For Work\\TamQuanDaiDe\\css\\beerslider\\beerslider.css",
+      "file": "css/libs/beerslider/beerslider.css",
+      "sha256": "5949196267a33f149ed992ae7a886f49d9309a09999cc774b9323dd2890b93ba"
+    },
+    {
+      "library": "beerslider",
+      "version": null,
+      "source": "D:\\Documents For Work\\TamQuanDaiDe\\js\\beerslider\\beerslider.js",
+      "file": "js/libs/beerslider/beerslider.js",
+      "sha256": "e30c5ee018c4b780ba605976a97f2cb2f36ae630e2c172e95e3117fc6f095597"
+    },
+    {
+      "library": "waypoints",
+      "version": "4.0.0",
+      "source": "D:\\Documents For Work\\TamQuanDaiDe\\js\\counter\\waypoint.js",
+      "file": "js/libs/waypoints/jquery.waypoints.js",
+      "sha256": "9aa803c2ac47f233861df653de284df330bd2ec6e5a97d0e28d2e1616f5ed2e0"
+    },
+    {
+      "library": "jquery-countup",
+      "version": null,
+      "source": "D:\\Documents For Work\\TamQuanDaiDe\\js\\counter\\jquery.countup.min.js",
+      "file": "js/libs/countup/jquery.countup.min.js",
+      "sha256": "f7061adee9390a89939324858f54f2a8472e023c3055cf6a9c72ed2720f72ebf"
+    },
+    {
+      "library": "wow.js",
+      "version": "1.3.0",
+      "source": "D:\\Documents For Work\\TamQuanDaiDe\\js\\wow\\wow.min.js",
+      "file": "js/libs/wow/wow.min.js",
+      "sha256": "7852a22b72ead62cfc4a1b1ca32874b3e222f232a991a6d1432313572f534135"
+    },
+    {
+      "library": "fontawesome-free",
+      "version": "7.1.0",
+      "source": "D:\\Documents For Work\\TamQuanDaiDe\\css\\fontawesome7.1.0\\webfonts\\fa-brands-400.woff2",
+      "file": "css/libs/fontawesome/webfonts/fa-brands-400.woff2",
+      "sha256": "061dd5c333459ea42dba764617793fd6ea2d316b7ab644f157e4d2354dac02af"
+    },
+    {
+      "library": "fontawesome-free",
+      "version": "7.1.0",
+      "source": "D:\\Documents For Work\\TamQuanDaiDe\\css\\fontawesome7.1.0\\webfonts\\fa-regular-400.woff2",
+      "file": "css/libs/fontawesome/webfonts/fa-regular-400.woff2",
+      "sha256": "81159a6b36876a5545555ae689144f074e2fc802d57d36f2c21bc6f3a12f4e48"
+    },
+    {
+      "library": "fontawesome-free",
+      "version": "7.1.0",
+      "source": "D:\\Documents For Work\\TamQuanDaiDe\\css\\fontawesome7.1.0\\webfonts\\fa-solid-900.woff2",
+      "file": "css/libs/fontawesome/webfonts/fa-solid-900.woff2",
+      "sha256": "bdd7887ef769948024a5cc37a018f19da6a9b355b4a09973836115e0d31ead55"
+    },
+    {
+      "library": "fontawesome-free",
+      "version": "7.1.0",
+      "source": "D:\\Documents For Work\\TamQuanDaiDe\\css\\fontawesome7.1.0\\webfonts\\fa-v4compatibility.woff2",
+      "file": "css/libs/fontawesome/webfonts/fa-v4compatibility.woff2",
+      "sha256": "c18e29ec6e1d46025f8fb1cf2e636c38078598ffa9399ccc52c7df07bb4ab1d0"
+    },
+    {
+      "library": "tailwindcss",
+      "version": "3.4.17",
+      "source": "D:/Documents For Work/50nam/50namApp/js/tailwindcss/taiwindcss.js",
+      "file": "js/libs/tailwind/tailwind-3.4.17.js",
+      "sha256": "ff3692b2705dab1ff356489742fd6e1321aac617194d1e31e4c1da5620fec3f8",
+      "usage": "Local browser compiler for development; no automatic loading."
+    }
+  ]
+}

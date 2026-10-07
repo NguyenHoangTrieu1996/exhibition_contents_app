@@ -1,0 +1,451 @@
+@font-face {
+  font-family: "VanHoa Be Vietnam Pro";
+  src: url("../../../public/elements/lansurong/fonts/BeVietnamPro-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "VanHoa Be Vietnam Pro";
+  src: url("../../../public/elements/lansurong/fonts/BeVietnamPro-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+.vanhoa-screen {
+  min-height: 100vh;
+  overflow: hidden;
+  overflow-wrap: normal;
+}
+
+.vanhoa-screen .ml-auto {
+  margin-left: auto !important;
+}
+
+.vanhoa-screen .container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.vanhoa-screen .navbar {
+  padding: 0.5rem 1rem;
+}
+
+.vanhoa-screen .navbar-brand {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  line-height: 1.5;
+}
+
+.vanhoa-screen .header .navbar-brand .logomuseum {
+  display: inline;
+}
+
+.vanhoa-screen .collapse {
+  visibility: visible;
+}
+
+.vanhoa-screen .lightimg p,
+.vanhoa-screen .lighting p {
+  color: #000;
+}
+
+/* Bootstrap 5 creates the backdrop at z-index 1050 outside this scope. */
+.vanhoa-screen .modal {
+  z-index: 1055;
+}
+
+/* The engagement modal now lives outside .aboutus__box/.aboutus__right.
+   Preserve the reference palette without depending on those ancestors. */
+.vanhoa-screen #vanhoa-engagement-modal .modal-content {
+  color: #000;
+  background-color: #fff;
+}
+
+.vanhoa-screen #vanhoa-engagement-modal .modal-body h1,
+.vanhoa-screen #vanhoa-engagement-modal .modal-body i {
+  color: #f55f8d;
+}
+
+.vanhoa-screen #vanhoa-engagement-modal .modal-body i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* modal-open belongs to body, outside the scoped Bootstrap 4 stylesheet.
+   Keep the reference modal scrollable, including on a 1080 x 1920 display. */
+.modal-open .vanhoa-screen .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Match the reference's 800px dialog at the portrait kiosk breakpoint.
+   Override Bootstrap 5's dialog width while retaining smaller-screen sizing. */
+@media (min-width: 992px) and (orientation: portrait) {
+  .vanhoa-screen #vanhoa-engagement-modal .modal-dialog {
+    width: calc(100% - 56px);
+    max-width: 800px;
+    margin: 28px auto;
+  }
+}
+
+.vanhoa-screen [data-source-missing] {
+  object-fit: contain;
+}
+
+.vanhoa-screen .vanhoa-lightgallery-image {
+  cursor: zoom-in;
+}
+
+.vanhoa-screen .vanhoa-lightgallery-image:focus-visible {
+  outline: 3px solid #ff6900;
+  outline-offset: 3px;
+}
+
+/* Modern museum presentation. All rules stay inside the Culture exhibition. */
+.vanhoa-screen {
+  --vh-paper: #f6f3ed;
+  --vh-ink: #262c28;
+  --vh-muted: #606760;
+  --vh-accent: #a64028;
+  --vh-jade: #124f48;
+  --vh-gold: #efbd62;
+  --vh-line: #ded9ce;
+  background: var(--vh-paper);
+  color: var(--vh-ink);
+  font-family: "VanHoa Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  overflow: clip;
+}
+.vanhoa-screen *, .vanhoa-screen *::before, .vanhoa-screen *::after {
+  transition-property: none;
+}
+.vanhoa-screen #theme_switch_dark,
+.vanhoa-screen #theme_switch_light {
+  --primary-color: #124f48;
+  --secondary-color: #a64028;
+  --font-color: #262c28;
+  --bg-color: #f6f3ed;
+  --heading-color: #262c28;
+  --border-color: #ded9ce;
+  --dropdown-color: #fffdf9;
+}
+.vanhoa-screen .container {
+  width: calc(100% - 96px);
+  max-width: 1280px;
+  padding: 0;
+  margin-inline: auto;
+}
+.vanhoa-screen h1, .vanhoa-screen h2, .vanhoa-screen h3 {
+  font-family: inherit;
+  text-wrap: balance;
+  letter-spacing: normal;
+}
+.vanhoa-screen button,
+.vanhoa-screen input,
+.vanhoa-screen select,
+.vanhoa-screen textarea { font-family: inherit; }
+.vanhoa-screen h1,
+.vanhoa-screen .aboutus__box h1,
+.vanhoa-screen .services h1,
+.vanhoa-screen .giaoduc h1 {
+  padding-top: 0;
+  margin-bottom: 32px;
+  color: var(--vh-ink);
+  font-size: clamp(34px, 4.6vw, 62px);
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: left;
+}
+.vanhoa-screen a:focus-visible,
+.vanhoa-screen button:focus-visible,
+.vanhoa-screen .vanhoa-lightgallery-image:focus-visible {
+  outline: 3px solid var(--vh-accent);
+  outline-offset: 5px;
+}
+
+/* Masthead: a compact identity above a wrapping navigation on portrait screens. */
+.vanhoa-screen .header {
+  background: #fffdf9;
+  border-bottom: 1px solid var(--vh-line);
+  padding: 20px 32px;
+}
+.vanhoa-screen .header .container-fluid { padding: 0; max-width: 1440px; }
+.vanhoa-screen .header .navbar { padding: 0; gap: 12px 24px; }
+.vanhoa-screen .header .navbar-brand { margin: 0; padding: 0; flex-shrink: 0; }
+.vanhoa-screen .header .navbar-brand .logomuseum {
+  display: block; width: 176px; max-width: 100%; height: auto;
+}
+.vanhoa-screen .header .navbar-nav { flex-wrap: wrap; gap: 4px; align-items: center; }
+.vanhoa-screen .header .nav-item .nav-link {
+  padding: 10px 13px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--vh-muted);
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: color .2s, background-color .2s;
+}
+.vanhoa-screen .header .nav-link::after { display: none; }
+.vanhoa-screen .header .nav-link:hover,
+.vanhoa-screen .header .active .nav-link {
+  color: var(--vh-accent); background: #eee7db;
+}
+.vanhoa-screen .header .theme-switch-wrapper { cursor: pointer; flex-shrink: 0; }
+.vanhoa-screen .header .theme-switch-wrapper img { width: 32px; margin: 6px; }
+.vanhoa-screen .navbar-toggler {
+  min-width: 48px; min-height: 48px; padding: 8px; border: 0; background: var(--vh-ink);
+}
+.vanhoa-screen .navbar-toggler-icon { background-image: none; }
+
+/* Full-bleed introduction retains every existing carousel image and caption. */
+.vanhoa-screen .carousel-item {
+  height: 82vh; min-height: 620px; max-height: 1400px;
+  transition: transform .6s ease-in-out;
+}
+.vanhoa-screen .carousel-inner .overlay {
+  background: linear-gradient(180deg, rgba(15,25,20,.08), rgba(15,25,20,.35) 35%, rgba(15,25,20,.9));
+}
+.vanhoa-screen .carousel-caption,
+.vanhoa-screen .carousel-inner .carousel-caption.ml-fix {
+  left: 8%; right: 8%; bottom: 12%; width: auto; max-width: 850px;
+  padding: 0; margin: 0; text-align: left;
+}
+.vanhoa-screen .carousel-inner h3 {
+  color: #fff9ee; font-size: clamp(44px, 6vw, 88px); line-height: 1.3;
+  font-weight: 400; margin-bottom: 28px;
+}
+.vanhoa-screen .carousel-inner p {
+  max-width: 650px; font-size: clamp(18px, 2vw, 24px); line-height: 1.7; opacity: 1;
+}
+.vanhoa-screen .carousel-inner .carousel-caption a {
+  display: inline-block; margin-top: 28px; padding: 16px 26px;
+  font: 700 18px/1.5 "VanHoa Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
+  background: #f6f3ed; color: #262c28; border: 1px solid #f6f3ed; border-radius: 4px;
+}
+.vanhoa-screen .carousel-inner .carousel-caption a:hover { background: #e7d5b8; color: #262c28; }
+.vanhoa-screen .carousel-indicators { gap: 10px; bottom: 28px; }
+.vanhoa-screen .carousel-indicators li,
+.vanhoa-screen .carousel-indicators .active,
+.vanhoa-screen .carousel-indicators li:hover {
+  width: 36px; height: 4px; margin: 0; border: 0; border-radius: 0;
+  background: #fff; opacity: .4;
+}
+.vanhoa-screen .carousel-indicators .active { opacity: 1; background: #e7c898; }
+
+/* Exhibition directories. */
+.vanhoa-screen .services { background: var(--vh-paper); padding: 72px 0 96px; text-align: left; }
+.vanhoa-screen .services__content { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-top: 48px; }
+.vanhoa-screen .services__box,
+.vanhoa-screen .phongtuc .services__box:nth-child(n) {
+  padding: 24px; background: #fffdf9; border: 1px solid var(--vh-line);
+  border-radius: 8px; box-shadow: none; min-width: 0;
+  transition: transform .2s, box-shadow .2s;
+}
+.vanhoa-screen .services__box:hover { transform: translateY(-4px); box-shadow: 0 14px 30px #262c2810; }
+.vanhoa-screen .services__box img {
+  display: block; width: 100%; height: 300px; object-fit: contain;
+  background: #eeeae2; border-radius: 4px; margin-bottom: 24px;
+}
+.vanhoa-screen .services__box a { color: var(--vh-ink); font-size: 26px; line-height: 1.4; }
+.vanhoa-screen .services p { text-align: left; line-height: 1.8; }
+
+/* Article openings: images remain uncropped and text stays in normal flow. */
+.vanhoa-screen .background-damcuoiviet,
+.vanhoa-screen .bg-damcuoinguoihoa,
+.vanhoa-screen .bg-cham,
+.vanhoa-screen .bg-khome,
+.vanhoa-screen .img-nguoihoa { background: var(--vh-paper); padding-bottom: 0; }
+.vanhoa-screen .aboutus,
+.vanhoa-screen .bg-thomau .aboutus,
+.vanhoa-screen .bg-thantai .aboutus,
+.vanhoa-screen .bg-nhacucham .aboutus { padding: 72px 0; margin: 0; }
+.vanhoa-screen .bg-damcuoinguoihoa > .container { padding-top: 72px; padding-bottom: 72px; }
+.vanhoa-screen .aboutus__box {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  align-items: start; gap: 64px; width: 100%; max-width: 1280px; margin-inline: auto;
+}
+.vanhoa-screen .aboutus > .aboutus__box { width: calc(100% - 96px); }
+.vanhoa-screen .aboutus__left,
+.vanhoa-screen .aboutus__right { position: static; width: 100%; min-width: 0; animation: none; }
+.vanhoa-screen .aboutus .aboutus__left img,
+.vanhoa-screen :is(.bg-thomau, .bg-thantai, .bg-thanhoang, .bg-nhacucham) .aboutus .aboutus__left img,
+.vanhoa-screen .aboutus__left img {
+  display: block; width: 100%; height: auto; max-height: 780px; object-fit: contain;
+  background: #eeeae2; border-radius: 8px; margin: 0;
+}
+.vanhoa-screen .aboutus__content,
+.vanhoa-screen .giaoduc p { text-align: left; line-height: 1.85; }
+.vanhoa-screen .aboutus__content ul,
+.vanhoa-screen .aboutus__content ol { padding-left: 24px; margin: 24px 0; }
+.vanhoa-screen .aboutus__content li { margin-block: 12px; }
+.vanhoa-screen .aboutus__right i { color: var(--vh-accent); font-size: 20px; }
+.vanhoa-screen .lightimg,
+.vanhoa-screen .lighting {
+  display: block; padding: 16px 20px; margin-block: 12px;
+  border: 1px solid var(--vh-line); border-radius: 6px; background: #fffdf9;
+  cursor: zoom-in; transition: border-color .2s, background-color .2s;
+}
+.vanhoa-screen .lightimg:hover,
+.vanhoa-screen .lighting:hover { border-color: var(--vh-accent); background: #f2ecdf; }
+.vanhoa-screen .lightimg p,
+.vanhoa-screen .lighting p { color: #000; }
+.vanhoa-screen .giaoduc { padding: 72px 0; }
+.vanhoa-screen .giaoduc .container { max-width: 960px; }
+
+/* Archival photographs: a consistent reading width and restrained captions. */
+.vanhoa-screen .text-hinhanh,
+.vanhoa-screen .hinhanh { width: calc(100% - 96px); max-width: 1120px; margin-inline: auto; }
+.vanhoa-screen .text-hinhanh { padding: 32px 0 18px; border-top: 1px solid var(--vh-line); }
+.vanhoa-screen .text-hinhanh p {
+  color: var(--vh-muted) !important; font-size: 18px !important; font-weight: 500 !important;
+  text-align: left !important; line-height: 1.6;
+}
+.vanhoa-screen .hinhanh img { display: block; height: auto; border-radius: 6px; margin-bottom: 64px; }
+
+/* Buttons and modal retain the working Bootstrap/lightGallery lifecycle. */
+.vanhoa-screen .btn-primary,
+.vanhoa-screen .btn-secondary {
+  position: static; min-height: 48px; padding: 14px 26px; margin-top: 16px;
+  border: 1px solid var(--vh-accent); border-radius: 5px;
+  background: var(--vh-accent); color: #fff; font-size: 18px; font-weight: 600;
+  text-transform: none; transition: background-color .2s;
+}
+.vanhoa-screen .btn-primary:hover,
+.vanhoa-screen .btn-secondary:hover { background: #654025; border-color: #654025; color: #fff; }
+.vanhoa-screen #vanhoa-engagement-modal .modal-content {
+  background: #fffdf9; color: var(--vh-ink); border: 1px solid var(--vh-line);
+  border-radius: 12px; box-shadow: 0 28px 100px #0003;
+}
+.vanhoa-screen .modal-header { padding: 16px 24px; border-bottom: 1px solid var(--vh-line); }
+.vanhoa-screen .modal-header .close { margin: 0 0 0 auto; padding: 8px 12px; opacity: 1; font-size: 32px; color: var(--vh-ink); }
+.vanhoa-screen .modal-body { padding: 24px 40px 40px; text-align: left; }
+.vanhoa-screen #vanhoa-engagement-modal .modal-body h1 { color: var(--vh-ink); font-size: 42px; text-align: left; }
+.vanhoa-screen #vanhoa-engagement-modal .modal-body i { color: var(--vh-accent); }
+.vanhoa-screen .modal-body ul { padding: 0; }
+.vanhoa-screen .modal-footer { padding: 18px 32px; border-top: 1px solid var(--vh-line); }
+.vanhoa-screen .modal-footer .btn { margin: 0; }
+.vanhoa-screen .backtotop { bottom: 24px; right: 24px; border-radius: 50%; background: var(--vh-ink); box-shadow: 0 4px 20px #0002; }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .vanhoa-screen .header .navbar { flex-wrap: wrap; }
+  .vanhoa-screen .header .navbar-collapse { order: 3; flex-basis: 100%; justify-content: center; border-top: 1px solid var(--vh-line); padding-top: 12px; }
+  .vanhoa-screen .header .navbar-nav { margin-left: 0 !important; justify-content: center; }
+  .vanhoa-screen .header .nav-item .nav-link { font-size: 16px; padding: 10px 14px; }
+}
+@media (max-width: 1199px) {
+  .vanhoa-screen .aboutus__box { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .vanhoa-screen .aboutus .aboutus__left img,
+  .vanhoa-screen .aboutus__left img { max-height: 620px; }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  .vanhoa-screen { font-size: 22px; }
+  .vanhoa-screen .carousel-item { height: 76vh; }
+  .vanhoa-screen .aboutus__right { max-width: 900px; margin-inline: auto; }
+  .vanhoa-screen .text-hinhanh p { font-size: 21px !important; }
+}
+@media (max-width: 767px) {
+  .vanhoa-screen { font-size: 17px; }
+  .vanhoa-screen .container,
+  .vanhoa-screen .aboutus > .aboutus__box,
+  .vanhoa-screen .text-hinhanh,
+  .vanhoa-screen .hinhanh { width: calc(100% - 40px); }
+  .vanhoa-screen .header { padding: 16px 20px; }
+  .vanhoa-screen .header .navbar { gap: 12px; }
+  .vanhoa-screen .header .navbar-brand .logomuseum { width: 130px; }
+  .vanhoa-screen .header .navbar-collapse { order: 4; }
+  .vanhoa-screen .header .navbar-nav { align-items: stretch; padding-top: 16px; }
+  .vanhoa-screen .header .nav-item { text-align: left; }
+  .vanhoa-screen .header .nav-item .nav-link { padding: 12px 16px; }
+  .vanhoa-screen .carousel-item { height: 78svh; min-height: 560px; }
+  .vanhoa-screen .carousel-caption { left: 8%; right: 8%; bottom: 12%; }
+  .vanhoa-screen .services__content { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .vanhoa-screen .services__box img { height: 250px; }
+  .vanhoa-screen .services,
+  .vanhoa-screen .giaoduc,
+  .vanhoa-screen .aboutus,
+  .vanhoa-screen .bg-thomau .aboutus,
+  .vanhoa-screen .bg-thantai .aboutus,
+  .vanhoa-screen .bg-nhacucham .aboutus { padding: 40px 0; }
+  .vanhoa-screen .modal-body { padding: 24px 20px; }
+  .vanhoa-screen .modal-body p[style] { padding-left: 0 !important; }
+  .vanhoa-screen #vanhoa-engagement-modal .modal-body h1 { font-size: 32px; }
+  .vanhoa-screen .lightimg, .vanhoa-screen .lighting { padding: 12px; }
+  .vanhoa-screen .hinhanh img { margin-bottom: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vanhoa-screen *, .vanhoa-screen *::before, .vanhoa-screen *::after {
+    animation: none !important; transition: none !important; scroll-behavior: auto !important;
+  }
+}
+
+/* A richer exhibition palette: jade, lacquer red, ochre and indigo. */
+.vanhoa-screen .header {
+  border-top: 6px solid var(--vh-jade);
+  border-bottom-color: #d7e2d9;
+  background: #fffdf6;
+}
+.vanhoa-screen .header .nav-link:hover,
+.vanhoa-screen .header .active .nav-link {
+  background: var(--vh-jade);
+  color: #fff;
+}
+.vanhoa-screen .navbar-toggler { background: var(--vh-jade); }
+.vanhoa-screen .carousel-inner .overlay {
+  background: linear-gradient(180deg, #083c3210, #083c3240 35%, #062d29ed);
+}
+.vanhoa-screen .carousel-inner h3 { color: #fff4db; }
+.vanhoa-screen .carousel-inner .carousel-caption a {
+  background: var(--vh-gold); border-color: var(--vh-gold); color: #183d32;
+}
+.vanhoa-screen .carousel-inner .carousel-caption a:hover { background: #ffcf80; color: #183d32; }
+.vanhoa-screen .carousel-indicators .active { background: var(--vh-gold); }
+.vanhoa-screen .services {
+  background: linear-gradient(145deg, #e7f1e9 0%, #f6f3ed 48%, #fbecd7 100%);
+}
+.vanhoa-screen .services h1,
+.vanhoa-screen .giaoduc h1 { color: var(--vh-jade); }
+.vanhoa-screen .services .title,
+.vanhoa-screen .aboutus__right .title {
+  border-left: 5px solid var(--vh-accent);
+  padding-left: 24px;
+}
+.vanhoa-screen .services__box:nth-child(4n+1) { --card-color: #14594d; --card-tint: #e7f1e9; }
+.vanhoa-screen .services__box:nth-child(4n+2) { --card-color: #a64028; --card-tint: #fae9df; }
+.vanhoa-screen .services__box:nth-child(4n+3) { --card-color: #75531a; --card-tint: #faf0d4; }
+.vanhoa-screen .services__box:nth-child(4n+4) { --card-color: #51477d; --card-tint: #edeaf6; }
+.vanhoa-screen .services__box:nth-child(n),
+.vanhoa-screen .phongtuc .services__box:nth-child(n) {
+  border-top: 5px solid var(--card-color);
+  background: var(--card-tint);
+}
+.vanhoa-screen .services__box a { color: var(--card-color); }
+.vanhoa-screen .services__box img { background: #fffdf9; }
+.vanhoa-screen .background-damcuoiviet { background: linear-gradient(145deg, #fae9df, #f6f3ed 75%); }
+.vanhoa-screen .bg-damcuoinguoihoa { background: linear-gradient(145deg, #f7e5e4, #f6f3ed 75%); }
+.vanhoa-screen .bg-cham { background: linear-gradient(145deg, #edeaf6, #f6f3ed 75%); }
+.vanhoa-screen .bg-khome { background: linear-gradient(145deg, #faf0d4, #f6f3ed 75%); }
+.vanhoa-screen .bg-thomau,
+.vanhoa-screen .bg-thantai,
+.vanhoa-screen .bg-thanhoang,
+.vanhoa-screen .bg-nhacucham { background: linear-gradient(145deg, #e7f1e9, #f6f3ed 75%); }
+.vanhoa-screen .aboutus__box h1 { color: var(--vh-jade); }
+.vanhoa-screen .aboutus__left img { border-bottom: 5px solid var(--vh-gold); }
+.vanhoa-screen .giaoduc { background: linear-gradient(145deg, #e7f1e9, #fff5df); }
+.vanhoa-screen .text-hinhanh { border-top-color: #c8d8cf; }
+.vanhoa-screen .text-hinhanh p { color: var(--vh-jade) !important; }
+.vanhoa-screen .lightimg,
+.vanhoa-screen .lighting { border-left: 4px solid var(--vh-accent); background: #fffaf2; }
+.vanhoa-screen .lightimg:hover,
+.vanhoa-screen .lighting:hover { background: #fbe8d6; }
+.vanhoa-screen .btn-primary:hover,
+.vanhoa-screen .btn-secondary:hover { background: #80301e; border-color: #80301e; }
+.vanhoa-screen #vanhoa-engagement-modal .modal-content { border-top: 6px solid var(--vh-jade); }
+.vanhoa-screen #vanhoa-engagement-modal .modal-header { background: #e7f1e9; }
+.vanhoa-screen #vanhoa-engagement-modal .modal-body h1 { color: var(--vh-jade); }
+.vanhoa-screen .backtotop { background: var(--vh-jade); }

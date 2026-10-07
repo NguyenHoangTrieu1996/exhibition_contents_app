@@ -1,0 +1,38 @@
+window.Pages = window.Pages || {};
+
+window.Pages.index = function (datas) {
+    const carouselItems = Array.isArray(datas)
+        ? datas.map((item, i) => `
+        <div class="carousel-item ${i === 0 ? 'active' : ''}">
+            <img class="d-block w-100"
+                 src="./${item.img}"
+                 alt="antin-${i + 1}">
+            <div class="carousel-caption d-block d-md-block">
+                <p class="lang lang-vi">${item.desc1}</p>
+                <p class="lang lang-eng" style="display:none;">${item.desc2}</p>
+            </div>
+        </div>`).join(""): "";
+
+    return `
+        <h1 class="lang lang-vi">Ấn Tín</h1>
+        <h1 class="lang lang-eng" style="display:none;">Seals</h1>
+        <div id="antin" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="background-top">
+            </div>
+
+        <div class="carousel-inner" id="carousel-inner">
+            
+            <!-- Map Data -->
+            ${carouselItems}
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#antin" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#antin" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        </div>
+       
+    `;
+};

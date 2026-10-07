@@ -1,0 +1,33 @@
+.st-screen{font-family:Inter,sans-serif!important;line-height:1.5;overflow-wrap:normal;isolation:isolate;position:relative;overflow-x:clip}
+.st-screen [hidden]{display:none!important}
+.st-screen h1,.st-screen h2,.st-screen h3{line-height:inherit}
+.st-screen .st-page-controls{position:fixed;z-index:50;bottom:2vw;left:1.5vw;right:2vw;display:flex;justify-content:space-between;align-items:center;pointer-events:none}
+.st-screen .st-control{pointer-events:auto;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:.3vw!important;min-height:44px!important;padding:1.2vw 2.4vw!important;border:1px solid #ffffff33!important;border-radius:999px!important;background:#5c000066!important;backdrop-filter:blur(12px)!important;color:#d4af37cc!important;font:700 1.8vw 'Public Sans',sans-serif!important;text-decoration:none!important;cursor:pointer!important}
+.st-screen .st-back{width:var(--st-language-width,auto)!important;height:var(--st-language-height,auto)!important;padding:0!important;animation:st-jumpBack 2s infinite ease-in-out!important}
+.st-screen .st-back .material-symbols-outlined{font-size:inherit!important;line-height:1!important}
+@keyframes st-jumpBack{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.st-home{position:relative;width:100%;height:100vh;min-height:720px;overflow:hidden;background:#410008 url('../../../../public/images/50nam/sieudothi/home-background.png') center/100% 100% no-repeat;color:#f6cb6e;font-family:Inter,sans-serif;line-height:1.4;isolation:isolate}
+.st-home *{box-sizing:border-box}
+.st-home-logo{position:absolute;top:3.8%;left:38%;width:24%;height:auto;filter:brightness(0) invert(1)}
+.st-home-title{position:absolute;left:4.55%;top:13.45%;width:85%;margin:0;color:#ffd572;font:800 5.1vw/1.15 Inter,sans-serif;letter-spacing:-.035em;text-shadow:0 0 12px #f0bb4980}
+.st-home-title span{display:block}
+.st-home-rule{position:absolute;top:24.8%;left:4.55%;width:13%;height:.4%;border-radius:8px;background:#ffd677;box-shadow:0 0 8px #e7b35266}
+.st-home-intro{position:absolute;left:4.55%;top:29.9%;width:57.5%;height:26.2%;padding:3.3vw;border:1px solid #e2a79540;border-radius:2.2vw;background:linear-gradient(120deg,#682633e8,#704b40d9);backdrop-filter:blur(12px);color:#f1ddd3;box-shadow:0 12px 24px #24000b30}
+.st-home-intro p{margin:0;font-size:2.5vw;line-height:1.42;text-align:justify;font-weight:400;overflow-wrap:normal}
+.st-home-chapter{position:absolute;left:4.55%;width:57.5%;display:flex;align-items:center;gap:2vw;padding:2.1vw 2.6vw;border:2px solid #f0bf70b3;border-radius:1.5vw;background:linear-gradient(110deg,#66372fe6,#7b483dce);backdrop-filter:blur(12px);box-shadow:0 0 14px #fac26750,inset 0 0 16px #efc78318;color:#ead4c6;text-decoration:none;font:700 2.4vw/1.4 Inter,sans-serif}
+.st-home-chapter:hover{color:#fff2d6;background:#8e493ee6}
+.st-home-chapter svg{flex-shrink:0;width:5vw;height:5vw;color:#f5c77b}
+.st-home-chapter-1{top:60.8%;height:7.4%}
+.st-home-chapter-2{top:70%;height:5.6%}
+.st-home-chapter-3{top:77.5%;height:7.4%}
+.st-home-chevron{margin-left:auto;flex-shrink:0;color:#efcb93;font-size:3.4vw;font-weight:400}
+.st-home-footer{position:absolute;bottom:2.8%;left:3.4%;right:3.8%;display:flex;align-items:center;justify-content:space-between}
+.st-home-back,.st-home-languages{display:flex;align-items:center;border:1px solid #d8ae8980;border-radius:999px;background:#804134b3;backdrop-filter:blur(12px);color:#f0c88e;text-decoration:none;font:700 2.2vw/1.5 Inter,sans-serif}
+.st-home-back{gap:1vw;padding:1.5vw 2vw;color:#f0c88e}
+.st-home-back:hover{color:#fff0ce}
+.st-home-languages{padding:.55vw}
+.st-home-languages button{border:0;background:transparent;border-radius:999px;padding:1.1vw 2.2vw;color:#f0c88e;font:500 1.85vw/1.5 Inter,sans-serif;cursor:pointer}
+.st-home-languages button[aria-pressed="true"]{background:linear-gradient(#ffdd81,#f6c753);color:#491e16;box-shadow:0 0 8px #f2bf5c60}
+.st-home a:focus-visible,.st-home button:focus-visible,.st-screen .st-control:focus-visible{outline:3px solid #ffe097;outline-offset:4px}
+@media(max-aspect-ratio:9/20){.st-home{height:auto;aspect-ratio:9/16;min-height:0}}
+@media(prefers-reduced-motion:reduce){.st-screen .st-back{animation:none!important}}

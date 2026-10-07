@@ -1,0 +1,320 @@
+.geography-screen {
+  --museum-text: #212529;
+  --museum-heading: #ec2227;
+  position: relative;
+  min-height: 100vh;
+  overflow: visible;
+  color: var(--museum-text);
+  font-family: Arial, sans-serif;
+}
+
+.geography-screen .logo {
+  position: fixed;
+  z-index: 5;
+  top: 2vh;
+  left: 50%;
+  width: 30%;
+  transform: translateX(-50%);
+}
+
+.geography-screen .logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  animation: geography-logo-enter 900ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.geography-screen h1 {
+  position: fixed;
+  z-index: 5;
+  top: 12vh;
+  left: 50%;
+  margin: 0;
+  transform: translateX(-50%);
+  color: var(--museum-heading);
+  font-size: clamp(18px, 4vw, 52px);
+  font-weight: 700;
+  text-align: center;
+  animation: geography-title-enter 700ms 100ms ease-out both;
+}
+
+.geography-carousel {
+  position: relative;
+  animation: geography-carousel-enter 800ms 180ms ease-out both;
+}
+
+.geography-screen .background-top {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 60vh;
+  background: url("../../../public/elements/phongdialyhanhchinh/bg-top.png") center / cover no-repeat;
+  pointer-events: none;
+  animation: geography-backdrop-enter 1.2s 150ms ease-out both;
+}
+
+.geography-screen .carousel-inner {
+  position: relative;
+  z-index: 1;
+  top: 17vh;
+  width: 80%;
+  margin: auto;
+}
+
+.geography-screen .carousel-inner > .carousel-item > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.geography-screen .carousel-item > .beer-slider {
+  width: 100%;
+}
+
+.geography-screen .carousel-item > .beer-slider img {
+  display: block;
+}
+
+.geography-screen .carousel-control-prev,
+.geography-screen .carousel-control-next {
+  z-index: 6;
+  top: 35vh;
+  bottom: auto;
+  width: 15%;
+  height: 0;
+}
+
+.geography-screen .carousel-control-prev-icon,
+.geography-screen .carousel-control-next-icon {
+  width: 5vw;
+  height: 5vw;
+  background-size: 100% 100%;
+}
+
+.geography-screen .carousel-control-prev-icon {
+  background-image: url("../../../public/elements/phongdialyhanhchinh/Pre.png");
+}
+
+.geography-screen .carousel-control-next-icon {
+  background-image: url("../../../public/elements/phongdialyhanhchinh/Next.png");
+}
+
+.geography-screen .carousel-caption {
+  position: fixed;
+  right: 10%;
+  bottom: 43vh;
+  left: 10%;
+  z-index: 3;
+}
+
+.geography-screen .carousel-caption p {
+  margin: 0;
+  color: var(--museum-text);
+  font-size: 1.8vw;
+}
+
+.geography-screen .background-button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  width: 100%;
+  height: 45vh;
+}
+
+.geography-screen .img-bg,
+.geography-screen .img-bg img {
+  width: 100%;
+  height: 100%;
+}
+
+.geography-screen .img-bg img {
+  display: block;
+}
+
+.geography-screen .geography-menu {
+  position: absolute;
+  inset: 0;
+}
+
+.geography-screen .geography-menu a {
+  position: absolute;
+  display: block;
+  width: 25.9%;
+}
+
+.geography-screen .geography-menu--animate a {
+  animation: geography-button-grow 650ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.geography-screen .geography-menu--animate a:nth-of-type(1) {
+  animation-delay: 280ms;
+}
+
+.geography-screen .geography-menu--animate a:nth-of-type(2) {
+  animation-delay: 360ms;
+}
+
+.geography-screen .geography-menu--animate a:nth-of-type(3) {
+  animation-delay: 440ms;
+}
+
+.geography-screen .geography-menu--animate a:nth-of-type(4) {
+  animation-delay: 520ms;
+}
+
+.geography-screen .geography-menu--animate a:nth-of-type(5) {
+  animation-delay: 600ms;
+}
+
+.geography-screen .geography-menu a img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.geography-screen .geography-menu a.active {
+  filter: hue-rotate(290deg);
+}
+
+.geography-screen .geography-menu a:nth-of-type(1) {
+  bottom: 45.5%;
+  left: 37%;
+}
+
+.geography-screen .geography-menu a:nth-of-type(2) {
+  bottom: 45.5%;
+  left: 5.25%;
+}
+
+.geography-screen .geography-menu a:nth-of-type(3) {
+  bottom: 45.5%;
+  left: 68.8%;
+}
+
+.geography-screen .geography-menu a:nth-of-type(4) {
+  bottom: 16%;
+  left: 21.15%;
+}
+
+.geography-screen .geography-menu a:nth-of-type(5) {
+  bottom: 16%;
+  left: 52.9%;
+}
+
+.geography-screen .geography-language {
+  position: fixed;
+  z-index: 100;
+  right: 3%;
+  bottom: 2vh;
+  width: 10%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.geography-screen--animate-entry .geography-language {
+  animation: geography-language-enter 650ms 650ms ease-out both;
+}
+
+.geography-screen .geography-language img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (orientation: landscape) {
+  .geography-screen .geography-language {
+    right: 2%;
+    bottom: 5vh;
+    width: 5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .geography-screen .carousel-caption p {
+    font-size: 3vw;
+  }
+}
+
+@keyframes geography-logo-enter {
+  from {
+    opacity: 0;
+    scale: 0.94;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes geography-title-enter {
+  from {
+    opacity: 0;
+    translate: 0 -14px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes geography-carousel-enter {
+  from {
+    opacity: 0;
+    translate: 0 18px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes geography-backdrop-enter {
+  from {
+    opacity: 0.35;
+    scale: 1.035;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes geography-button-grow {
+  from {
+    scale: 0.12;
+  }
+
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes geography-language-enter {
+  from {
+    opacity: 0;
+    scale: 0.9;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .geography-screen .logo img,
+  .geography-screen h1,
+  .geography-carousel,
+  .geography-screen .background-top,
+  .geography-screen .geography-menu a,
+  .geography-screen--animate-entry .geography-language {
+    animation: none;
+  }
+}
