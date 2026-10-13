@@ -315,3 +315,30 @@
         transition: none;
     }
 }
+
+@media not all and (min-width: 1000px) and (max-aspect-ratio: 3/4) {
+/* Content and chapter links follow the document flow on every device. */
+.lion-screen{display:flex;flex-direction:column;min-height:100svh;padding-bottom:88px;background:#791713;isolation:isolate}
+.lion-screen .lion-logo{position:relative;top:auto;left:auto;transform:none;width:clamp(160px,20vw,260px);margin:24px auto;z-index:2}
+.lion-screen .lion-page{order:1;width:100%}
+.lion-screen .lion-page .content-index{position:relative;top:auto;width:100%;padding:24px 0}
+.lion-screen .lion-page .container-index{width:calc(100% - 40px);max-width:1100px;padding:clamp(20px,3vw,40px);border-radius:16px;background:#741510ed}
+.lion-screen.lion-home .lion-page{padding-top:clamp(100px,19vw,240px)}
+.lion-screen .lion-page .container-index h1,.lion-screen .lion-page .container-child h1{font-size:clamp(28px,3.8vw,52px);line-height:1.35;margin-bottom:24px}
+.lion-screen .lion-page .container-index p,.lion-screen .lion-page .container-child p{font-size:clamp(16px,1.5vw,22px);line-height:1.8;text-align:start;margin-bottom:20px}
+.lion-screen .lion-page .container-child{width:calc(100% - 40px);max-width:1100px;padding:24px 0}
+.lion-screen .lion-page .content-box p{width:100%;font-size:clamp(14px,1.3vw,18px);line-height:1.7;padding:12px 0}
+.lion-screen .lion-page .spacing{width:100%}
+.lion-screen .lion-page img,.lion-screen .lion-page video{max-width:100%}
+.lion-screen .lion-portfolio{position:relative;bottom:auto;order:2;margin-top:32px;padding:24px 0;z-index:3}
+.lion-screen .lion-frame{width:calc(100% - 40px);max-width:1200px}
+.lion-screen .lion-portfolio-content{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.lion-screen .lion-portfolio-box,.lion-screen[data-language="en"] .lion-portfolio-box{grid-column:auto!important;display:flex;align-items:center;justify-content:center;min-height:76px;padding:16px;font-size:clamp(14px,1.4vw,18px);line-height:1.5;white-space:normal;border-radius:16px}
+.lion-screen .lion-portfolio-box p{font-size:inherit;line-height:inherit}
+.lion-screen .lion-language{right:16px;bottom:max(16px,env(safe-area-inset-bottom));width:52px;height:52px}
+.lion-screen .lion-background-bottom{position:absolute;z-index:-1;bottom:0;pointer-events:none}
+.lion-screen canvas#fireworks{height:100%;pointer-events:none}
+@media(max-width:760px){.lion-screen .lion-portfolio-content{grid-template-columns:repeat(2,minmax(0,1fr))}.lion-screen .lion-portfolio-box{min-height:88px}.lion-screen.lion-home .lion-page{padding-top:110px}}
+.lion-screen.lion-home .lion-page{padding-top:0}
+.lion-screen.lion-home .lion-page .bg-index{position:relative;inset:auto;height:clamp(200px,36vw,720px);z-index:0;background-size:100% auto;background-position:top center}
+}

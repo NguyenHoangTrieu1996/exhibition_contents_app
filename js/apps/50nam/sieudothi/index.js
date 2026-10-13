@@ -5,7 +5,7 @@
     '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 33h40M12 10v31m24-31v31M24 8v33M4 27c8-2 16-8 20-19 4 11 12 17 20 19M8 25v8m9-15v15m14-15v15m9-8v8" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>',
     '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M21 7C6 7 4 23 12 33l9 11 9-11C38 23 36 7 21 7Z" fill="currentColor"/><circle cx="21" cy="20" r="5" fill="#74392e"/><path d="m38 8 2 4 5 1-4 3 1 5-4-2-4 2 1-5-4-3 5-1Z" fill="currentColor"/></svg>'
   ];
-  Exhibition.registerPage('50nam','sieudothi/index',{render(root,context){
+  Exhibition.registerPage('sieudothi','index',{render(root,context){
     const en=context.lang==='en',href=Exhibition.sieudothi.href;
     const title=en?['INTEGRATED MEGA CITY','-','NATIONAL DYNAMICS']:['SIÊU ĐÔ THỊ TÍCH HỢP','-','ĐỘNG LỰC QUỐC GIA'];
     const intro=en?'The core objective of developing Ho Chi Minh City into a mega city is to expand living space to solve infrastructure and population overload. This helps unify planning management, creating seamless transportation connectivity and optimizing regional economic resources. Thereby forming a leading economic engine with superior scale and competitiveness, influential enough to become a key financial and service center for the region and the world.':'Mục tiêu cốt lõi của việc phát triển TP.HCM thành siêu đô thị là mở rộng không gian sinh tồn để giải quyết tình trạng quá tải hạ tầng và dân số. Việc này giúp thống nhất quản lý quy hoạch, tạo sự kết nối giao thông liền mạch và tối ưu hóa nguồn lực kinh tế toàn vùng. Qua đó, hình thành một "đầu tàu" kinh tế có quy mô và sức cạnh tranh vượt trội, đủ tầm ảnh hưởng để trở thành trung tâm tài chính, dịch vụ trọng điểm của khu vực và quốc tế.';

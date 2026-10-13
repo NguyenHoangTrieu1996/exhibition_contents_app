@@ -117,7 +117,11 @@
       const image = document.createElement('img');
       image.src = `${elementRoot}${english ? item.imageEn : item.image}`;
       image.alt = english ? item.titleEn : item.title;
-      link.appendChild(image);
+      image.alt = '';
+      image.setAttribute('aria-hidden', 'true');
+      const label = document.createElement('span');
+      label.textContent = english ? item.titleEn : item.title;
+      link.append(image, label);
       menu.appendChild(link);
     });
 

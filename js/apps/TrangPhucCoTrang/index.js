@@ -146,6 +146,9 @@
       startCountdown();
     }, {signal:context.signal});
 
+    // The SPA restores the current slide when returning to this exhibition.
+    // Synchronize the strip even when no slide transition has fired yet.
+    updateActiveThumbnail(Math.max(0, [...carousel.querySelectorAll('.carousel-item')].findIndex(slide => slide.classList.contains('active'))));
     startCountdown();
     context.onCleanup(stopCountdown);
   }

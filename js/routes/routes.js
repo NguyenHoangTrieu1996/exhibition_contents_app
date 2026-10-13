@@ -9,13 +9,14 @@
  * }
  * Trang đăng ký bằng Exhibition.registerPage('dia-ly','index',{render,features}).
  * initialApp/initialPage chọn trang mặc định khi mở index.html hoặc #/.
+ * Hai app 50 năm dùng initialApp: dongchaydisan hoặc sieudothi, initialPage: index.
  * Có thể thay tên/tệp HTML chính: các liên kết hash luôn ở cùng tài liệu.
  * shell cho phép thay ID các phần tử trong HTML mà không sửa main.js.
  */
 (function () {
   'use strict';
-  const config = {
-    initialApp: 'phongdialyhanhchinh',
+  const config = { 
+    initialApp: 'sieudothi',
     initialPage: 'index',
     shell: {root:'app', navigation:'app-navigation', languageButton:'language-toggle'},
     apps: [
@@ -30,7 +31,8 @@
         ['phongkinhte',{vi:'Phòng Kinh tế',en:'Economy Gallery'}],
         ['phongdialyhanhchinh',{vi:'Phòng Địa lý - Hành chính',en:'Geography and Administration Gallery'}],
         ['duongham',{vi:'Đường hầm',en:'The Tunnel'}],
-        ['50nam',{vi:'50 năm',en:'50 Years'}],
+        ['dongchaydisan',{vi:'50 năm — Dòng chảy di sản và bản lĩnh đô thị',en:'50 Years — Heritage Flow and Urban Resilience'}],
+        ['sieudothi',{vi:'50 năm — Siêu đô thị',en:'50 Years — Megacity'}],
         ['lansurong',{vi:'Lân Sư Rồng',en:'Lion and Dragon Dance'}],
         ['SongNuoc',{vi:'Sông nước',en:'Rivers and Waterways'}],
         ['TrangPhucCoTrang',{vi:'Trang phục cổ trang',en:'Historical Costumes'}],
@@ -63,21 +65,17 @@
             'tinnguong/tinnguong','tinnguong/thomau','tinnguong/thothanhoang',
             'tinnguong/thothantai'
           ].map(page=>[page,{script:`./js/apps/vanhoa/pages/${page}.js`}]))
-        } : id === '50nam' ? {
-          styles:['./css/apps/50nam/dongchaydisan/fonts.css','./css/apps/50nam/dongchaydisan/legacy.css','./css/apps/50nam/dongchaydisan/source.css','./css/apps/50nam/dongchaydisan/style.css'],
-          scripts:['./js/apps/50nam/dongchaydisan/shared.js','./js/apps/50nam/dongchaydisan/index.js','./js/apps/50nam/sieudothi/shared.js'],
-          pages:{
-            index:{script:'./js/apps/50nam/dongchaydisan/index.js'},
-            'dongchaydisan/index':{script:'./js/apps/50nam/dongchaydisan/index.js'},
-            'dongchaydisan/page1':{script:'./js/apps/50nam/dongchaydisan/page1.js'},
-            'dongchaydisan/page2':{script:'./js/apps/50nam/dongchaydisan/page2.js',data:['./public/datas/50nam/dongchaydisan/page2Data.js']},
-            'dongchaydisan/page3':{script:'./js/apps/50nam/dongchaydisan/page3.js',data:['./public/datas/50nam/dongchaydisan/page3Data.js']},
-            ...Object.fromEntries(['index','page1','page2','page3'].map(page=>['sieudothi/'+page,{
-              script:'./js/apps/50nam/sieudothi/'+page+'.js',
-              styles:['./css/apps/50nam/sieudothi/fonts.css','./css/apps/50nam/sieudothi/legacy.css','./css/apps/50nam/sieudothi/source.css','./css/apps/50nam/sieudothi/style.css'],
-              ...(page==='index'?{}:{data:['./public/datas/50nam/sieudothi/'+page+'Data.js']})
-            }]))
-          }
+        } : ['dongchaydisan','sieudothi'].includes(id) ? {
+          styles:['fonts','legacy','source','style'].map(name=>`./css/apps/50nam/${id}/${name}.css`),
+          scripts:[`./js/apps/50nam/${id}/shared.js`],
+          pages:Object.fromEntries(['index','page1','page2','page3'].map(page=>[page,{
+            script:`./js/apps/50nam/${id}/${page}.js`,
+            ...(page==='index'||(id==='dongchaydisan'&&page==='page1')?{}:{data:[`./public/datas/50nam/${id}/${page}Data.js`]})
+          }]))
+        } : id === 'thuvakyvatkhangchien' ? {
+          styles:['./css/apps/thuvakyvatkhangchien/style.css'],
+          scripts:['./public/datas/thuvakyvatkhangchien/index.js'],
+          pages:Object.fromEntries(['index','tien-tuyen','nhat-ky','thu-lanh-dao','thu-chien-si','bo-suu-tap',...Array.from({length:31},(_,i)=>'hien-vat-'+(i+1))].map(page=>[page,{script:'./js/apps/thuvakyvatkhangchien/index.js'}]))
         } : id === 'temvebac' ? {
           styles:['./css/apps/temvebac/style.css','./js/libs/lightgallery/css/lightgallery-bundle.min.css'],
           scripts:[

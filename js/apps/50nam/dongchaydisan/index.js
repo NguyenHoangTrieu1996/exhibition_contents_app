@@ -100,6 +100,5 @@ Exhibition.dongchaydisan.templates.index = function () {
     </section>
     `;
 };
-Exhibition.registerPage('50nam','dongchaydisan/index',Exhibition.dongchaydisan.page('index'));
-Exhibition.registerPage('50nam','index',Exhibition.dongchaydisan.page('index'));
+Exhibition.registerPage('dongchaydisan','index',Exhibition.dongchaydisan.page('index'));
 })();

@@ -163,3 +163,9 @@
 .temvebac-screen .tb-languages{display:flex;flex-wrap:wrap;gap:8px}
 .temvebac-screen .tb-header{flex-wrap:wrap}
 @media(max-width:767px){.temvebac-screen .tb-languages{width:100%}.temvebac-screen .tb-language{font-size:13px}}
+@media not all and (min-width: 1000px) and (max-aspect-ratio: 3/4) {
+/* Keep collection captions readable and navigation easy to tap on phones. */
+.temvebac-screen .tb-photo-caption,.temvebac-screen .tb-art-caption,.temvebac-screen .tb-occasion,.temvebac-screen .tb-archive-item>p{font-size:14px;line-height:1.6}
+.temvebac-screen .tb-header nav a,.temvebac-screen .tb-chapter-nav a{display:inline-flex;align-items:center;min-height:44px;font-size:14px}
+@media(max-width:480px){.temvebac-screen .tb-block-photos,.temvebac-screen .tb-archive-grid{grid-template-columns:minmax(0,1fr)}.temvebac-screen .tb-photo img{height:240px}}
+}

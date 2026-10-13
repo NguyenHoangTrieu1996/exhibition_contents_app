@@ -31,7 +31,7 @@
     const navLabel = english ? 'Lion and Dragon Dance sections' : 'Các chuyên đề Lân Sư Rồng';
 
     root.innerHTML = `
-      <div class="lion-screen" data-language="${context.lang}">
+      <div class="lion-screen${section.page === 'index' ? ' lion-home' : ''}" data-language="${context.lang}">
         <header class="lion-logo">
           <img src="${elementRoot}logo.png" alt="Bảo tàng Thành phố Hồ Chí Minh">
         </header>

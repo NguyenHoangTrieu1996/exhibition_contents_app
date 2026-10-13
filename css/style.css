@@ -6,6 +6,23 @@
   background: linear-gradient(120deg, #f2eee3, #fbfaf6);
 }
 
+@media not all and (min-width: 1000px) and (max-aspect-ratio: 3/4) {
+/* Every exhibition owns its layout; shared media still fit their container. */
+#app>[data-app]{min-width:0;max-width:100%;min-height:100svh}
+#app>[data-app] img,#app>[data-app] video{max-width:100%}
+#app>[data-app] .beer-reveal>img:first-child{max-width:none}
+#app>[data-app] input,#app>[data-app] select,#app>[data-app] textarea{max-width:100%}
+/* A real header row keeps controls clear of exhibition text while scrolling. */
+.exhibition-controls{position:relative;z-index:12;order:-1;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;width:100%;min-height:76px;padding:12px 16px;background:#172b3bf2;border-bottom:1px solid #ffffff30}
+.exhibition-controls>*{position:static!important;inset:auto!important;transform:none!important;margin:0!important;max-width:100%!important;flex-shrink:0}
+.exhibition-controls>:only-child{margin-left:auto!important}
+.exhibition-controls>.st-page-controls{width:100%;justify-content:space-between}
+.economy-screen,.river-screen{position:relative}
+#app .economy-screen .economy-navigation,#app .river-screen .river-navigation{position:absolute;top:80px;bottom:auto;max-height:calc(100dvh - 104px)}
+.dcd-screen .exhibition-controls,.st-screen .exhibition-controls,.lion-screen .exhibition-controls{background:#521d23f2}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
 .exhibition-placeholder h1 {
   margin: 0;
   color: #183d3a;

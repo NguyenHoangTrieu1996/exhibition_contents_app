@@ -14,8 +14,8 @@
         {id:'phongkinhte', title:'Phòng Kinh tế', titleEn:'Economy Gallery', detail:'Dấu ấn giao thương, lao động và phát triển của thành phố.', detailEn:'Trade, work and the development of the city.', category:'KHÔNG GIAN TRƯNG BÀY'},
         {id:'phongdialyhanhchinh', title:'Phòng Địa lý - Hành chính', titleEn:'Geography and Administration', detail:'Diện mạo vùng đất và hành trình hình thành đô thị.', detailEn:'The character of the land and the making of the city.', category:'KHÔNG GIAN TRƯNG BÀY'},
         {id:'duongham', title:'Đường hầm', titleEn:'The Tunnel', detail:'Khám phá một không gian trưng bày giàu dấu ấn lịch sử.', detailEn:'Discover a gallery shaped by powerful historical memories.', category:'KHÔNG GIAN TRẢI NGHIỆM'},
-        {id:'50nam', page:'dongchaydisan/index', title:'50 năm — Dòng chảy di sản và bản lĩnh đô thị', titleEn:'50 Years — Heritage Flow and Urban Resilience', detail:'Dấu ấn lịch sử, đổi mới và hội nhập qua nửa thế kỷ phát triển.', detailEn:'History, innovation and international integration across half a century.', category:'CHUYÊN ĐỀ'},
-        {id:'50nam', page:'sieudothi/index', title:'50 năm — Siêu đô thị', titleEn:'50 Years — Megacity', detail:'Siêu đô thị tích hợp — động lực quốc gia.', detailEn:'Integrated megacity — national dynamics.', category:'CHUYÊN ĐỀ'}
+        {id:'dongchaydisan', page:'index', title:'50 năm — Dòng chảy di sản và bản lĩnh đô thị', titleEn:'50 Years — Heritage Flow and Urban Resilience', detail:'Dấu ấn lịch sử, đổi mới và hội nhập qua nửa thế kỷ phát triển.', detailEn:'History, innovation and international integration across half a century.', category:'CHUYÊN ĐỀ'},
+        {id:'sieudothi', page:'index', title:'50 năm — Siêu đô thị', titleEn:'50 Years — Megacity', detail:'Siêu đô thị tích hợp — động lực quốc gia.', detailEn:'Integrated megacity — national dynamics.', category:'CHUYÊN ĐỀ'}
       ]
     },
     {

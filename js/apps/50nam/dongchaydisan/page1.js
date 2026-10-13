@@ -484,5 +484,5 @@ Exhibition.dongchaydisan.templates.page1 = function () {
     </section>
     `;
 };
-Exhibition.registerPage('50nam','dongchaydisan/page1',Exhibition.dongchaydisan.page('page1'));
+Exhibition.registerPage('dongchaydisan','page1',Exhibition.dongchaydisan.page('page1'));
 })();

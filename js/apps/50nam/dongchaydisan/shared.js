@@ -1,13 +1,14 @@
 (function(){
   'use strict';
   const app=Exhibition.dongchaydisan=Exhibition.dongchaydisan||{templates:{},data:{}};
-  const href=name=>ExhibitionRoutes.href('50nam','dongchaydisan/'+name);
+  const href=name=>ExhibitionRoutes.href('dongchaydisan',name);
   app.page=name=>({render(root,context){
     const en=context.lang==='en';
     root.innerHTML=`<div class="dcd-screen ${name==='index'?'dcd-home':''}" lang="${en?'en':'vi'}">${app.templates[name](app.data[name])}</div>`;
     const screen=root.firstElementChild;
     // Preserve the source's inline sizing against shared framework utilities.
     screen.querySelectorAll('[style]').forEach(el=>{for(const property of [...el.style])el.style.setProperty(property,el.style.getPropertyValue(property),'important');});
+    ExhibitionComponents.Responsive.normalizeText(screen);
     screen.querySelectorAll('[onclick]').forEach(el=>{el.remove();});
     screen.querySelectorAll('.lang').forEach(el=>{el.hidden=!el.classList.contains(en?'lang-eng':'lang-vi');el.classList.remove('hidden');});
     screen.querySelectorAll('a[href]').forEach(a=>{const m=a.getAttribute('href').match(/^#\/(page[123])?$/);if(m)a.href=href(m[1]||'index');});
@@ -24,6 +25,7 @@
       const buttonResize=new ResizeObserver(matchButtonSize);buttonResize.observe(languageButton);matchButtonSize();
       context.signal.addEventListener('abort',()=>buttonResize.disconnect(),{once:true});
     }
+    ExhibitionComponents.Responsive.normalizeIcons(screen);
     const carousel=screen.querySelector('#carousel');if(!carousel)return;
     initCarousel(carousel,screen,app.data[name],en,context.signal);
   }});

@@ -81,5 +81,5 @@ Exhibition.sieudothi.templates.page1 = function (datas) {
     </section>
     `;
 };
-Exhibition.registerPage('50nam','sieudothi/page1',Exhibition.sieudothi.page('page1'));
+Exhibition.registerPage('sieudothi','page1',Exhibition.sieudothi.page('page1'));
 })();

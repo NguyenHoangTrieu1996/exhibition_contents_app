@@ -145,5 +145,5 @@ Exhibition.dongchaydisan.templates.page2 = function (datas) {
     </section>
     `;
 };
-Exhibition.registerPage('50nam','dongchaydisan/page2',Exhibition.dongchaydisan.page('page2'));
+Exhibition.registerPage('dongchaydisan','page2',Exhibition.dongchaydisan.page('page2'));
 })();

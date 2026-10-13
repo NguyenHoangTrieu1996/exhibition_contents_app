@@ -188,6 +188,7 @@
     if (typeof definition.afterRender==='function') {
       const cleanup=await definition.afterRender(element,context); context.onCleanup(cleanup);
     }
+    window.ExhibitionComponents.Responsive.mountControls(element,context.signal);
     guard(context.signal);
   }
   async function render() {

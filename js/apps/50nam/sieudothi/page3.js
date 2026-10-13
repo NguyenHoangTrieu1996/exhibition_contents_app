@@ -131,5 +131,5 @@ Exhibition.sieudothi.templates.page3 = function (datas) {
         </div>
     </section>`;
 };
-Exhibition.registerPage('50nam','sieudothi/page3',Exhibition.sieudothi.page('page3'));
+Exhibition.registerPage('sieudothi','page3',Exhibition.sieudothi.page('page3'));
 })();
