@@ -16,7 +16,7 @@
 (function () {
   'use strict';
   const config = { 
-    initialApp: 'sieudothi',
+    initialApp: 'cacchuyendekhac',
     initialPage: 'index',
     shell: {root:'app', navigation:'app-navigation', languageButton:'language-toggle'},
     apps: [
