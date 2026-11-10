@@ -56,7 +56,7 @@
       .find(element => new URL(css ? element.href : element.src, document.baseURI).href === absolute);
     if (existing) {
       const entry = {node:existing, css, shared:css};
-      entry.promise = Promise.resolve(existing);
+      entry.promise = Promise.resolve(entry);
       resources.set(absolute,entry);
       return entry.promise;
     }
@@ -66,8 +66,22 @@
     const entry = {node, css};
     entry.promise = new Promise((resolve,reject) => {
       const timer = setTimeout(() => fail(),30000);
-      function fail() { clearTimeout(timer); node.remove(); resources.delete(absolute); reject(new Error('Cannot load ' + url)); }
-      node.onload=() => { clearTimeout(timer); resolve(node); }; node.onerror=fail;
+      let settled = false;
+      function fail() {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timer);
+        node.remove();
+        if (resources.get(absolute) === entry) resources.delete(absolute);
+        reject(new Error('Cannot load ' + url));
+      }
+      node.onload=() => {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timer);
+        resolve(entry);
+      };
+      node.onerror=fail;
       document.head.appendChild(node);
     });
     resources.set(absolute,entry); return entry.promise;
@@ -93,7 +107,12 @@
     resources.forEach((entry,url) => { if (entry.css && !entry.shared) entry.node.media = active.has(url) ? 'all' : 'not all'; });
   }
   async function library(script,style,signal) {
-    if (style) { const node = await resource(style,true); guard(signal); resources.get(node.href).shared=true; node.media='all'; }
+    if (style) {
+      const entry = await resource(style,true);
+      guard(signal);
+      entry.shared = true;
+      entry.node.media = 'all';
+    }
     if (script) await resource(script); guard(signal);
   }
   function savePosition() {

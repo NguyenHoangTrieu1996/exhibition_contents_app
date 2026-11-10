@@ -345,3 +345,183 @@
 }
 
 @media (min-width:1000px) and (max-aspect-ratio:3/4){.geography-screen .geography-menu a>span{display:none}}
+
+@media (orientation: landscape) {
+  .geography-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+    padding: 0;
+    background: #f6f8fa url("../../../public/elements/phongdialyhanhchinh/bg-top.png") center / cover no-repeat;
+  }
+
+  .geography-screen .logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: clamp(120px, 14vw, 190px);
+    margin: 0;
+    transform: none;
+  }
+
+  .geography-screen h1 {
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    width: min(44vw, 620px);
+    transform: translateX(-50%);
+    font-size: clamp(20px, 2.8vw, 36px);
+    line-height: 1.25;
+  }
+
+  .geography-screen .geography-language {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    bottom: auto;
+    width: clamp(44px, 7vh, 60px);
+  }
+
+  .geography-screen .geography-exhibition {
+    position: absolute;
+    inset: clamp(84px, 13vh, 108px) 0 clamp(88px, 15vh, 122px);
+    display: grid;
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  .geography-screen .geography-carousel {
+    min-height: 0;
+    height: 100%;
+  }
+
+  .geography-screen .background-top {
+    display: none;
+  }
+
+  .geography-screen .carousel-inner {
+    top: auto;
+    width: min(90%, 1240px);
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .geography-screen .carousel-item.active {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .geography-screen .carousel-inner > .carousel-item > img {
+    width: auto !important;
+    max-width: 100%;
+    max-height: calc(100% - 58px);
+    object-fit: contain;
+  }
+
+  .geography-screen .carousel-item > .beer-slider {
+    width: auto;
+    height: calc(100% - 58px);
+    max-width: 100%;
+    aspect-ratio: 867 / 624;
+    flex: 0 1 auto;
+  }
+
+  .geography-screen .carousel-item > .beer-slider > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .geography-screen .carousel-item > .beer-slider .beer-reveal > img:first-child {
+    height: 100%;
+  }
+
+  .geography-screen .carousel-caption {
+    position: relative;
+    inset: auto;
+    width: min(100%, 1120px);
+    padding: 4px 16px;
+    background: rgba(246, 248, 250, 0.78);
+    text-align: center;
+  }
+
+  .geography-screen .carousel-caption p {
+    font-size: clamp(13px, 1.3vw, 18px);
+    line-height: 1.35;
+  }
+
+  .geography-screen .carousel-control-prev,
+  .geography-screen .carousel-control-next {
+    top: 50%;
+    bottom: auto;
+    width: clamp(48px, 6vw, 76px);
+    height: 64px;
+    transform: translateY(-50%);
+  }
+
+  .geography-screen .carousel-control-prev-icon,
+  .geography-screen .carousel-control-next-icon {
+    width: clamp(36px, 4vw, 54px);
+    height: clamp(36px, 4vw, 54px);
+  }
+
+  .geography-screen .background-button {
+    position: absolute;
+    inset: auto 0 0;
+    z-index: 5;
+    width: 100%;
+    height: clamp(88px, 15vh, 122px);
+    margin: 0;
+    padding: 0;
+    background: url("../../../public/elements/phongdialyhanhchinh/bg-button.png") center / cover no-repeat;
+  }
+
+  .geography-screen .img-bg {
+    display: none;
+  }
+
+  .geography-screen .geography-menu {
+    position: relative;
+    inset: auto;
+    display: flex;
+    width: min(calc(100% - 32px), 1180px);
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    gap: clamp(8px, 2vw, 28px);
+    margin: 0 auto;
+  }
+
+  .geography-screen .geography-menu a {
+    position: static !important;
+    display: flex;
+    width: auto;
+    height: 100%;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .geography-screen .geography-menu a img {
+    width: auto;
+    height: min(90%, 90px);
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .geography-screen .geography-menu a > span {
+    display: none;
+  }
+}

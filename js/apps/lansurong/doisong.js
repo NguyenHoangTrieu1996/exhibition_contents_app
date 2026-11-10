@@ -240,6 +240,5 @@ window.Pages.doisong = function () {
               
             </div>
         </section>
-        <section class="bg-child"><img loading="eager" src="./public/elements/lansurong/bg-child.jpg" alt="bg"></section>
     `;
 };

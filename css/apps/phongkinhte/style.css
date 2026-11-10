@@ -428,3 +428,19 @@
 @media(max-width:760px){.economy-screen .content .portlofio-content{grid-template-columns:repeat(2,minmax(0,1fr))}.economy-screen .bg-content{background-attachment:scroll}}
 @media(max-width:360px){.economy-screen .content .portlofio-content{grid-template-columns:minmax(0,1fr)}}
 }
+
+@media (orientation: landscape) {
+  .economy-screen .bg-content:is(#nongnghiep, #congnghiep, #kimhoan, #lamgom, #khacgo, #ducdong) br.screen-portrait {
+    display: none;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 768px) {
+  .economy-screen .bg-content:is(#nongnghiep, #congnghiep, #kimhoan, #lamgom, #khacgo, #ducdong) .content > p {
+    width: calc(100% - 48px);
+    max-width: 1040px;
+    padding: 18px 0 0;
+    font-size: clamp(18px, 1.35vw, 22px);
+    line-height: 1.65;
+  }
+}

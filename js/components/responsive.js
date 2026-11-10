@@ -4,11 +4,12 @@
   // Preserve the original portrait exhibition on large vertical displays.
   // Phones, tablets and landscape displays continue to use the reflow layout.
   const exhibitionDisplay = window.matchMedia('(min-width:1000px) and (max-aspect-ratio:3/4)');
+  const landscapeDisplay = window.matchMedia('(orientation:landscape)');
   const originalTypography = new WeakMap();
+  const landscapeTypography = new WeakMap();
   function mountControls(root, signal) {
     const groups = [
       ['.economy-screen', '.economy-home,.economy-back,.economy-language'],
-      ['.lion-screen', '.lion-logo,.lion-language'],
       ['.river-screen', '.river-home,.river-language'],
       ['.dcd-screen', '.dcd-footer-button,.dcd-toolbar'],
       ['.st-screen', '.st-page-controls']
@@ -30,7 +31,7 @@
     });
     function updateLayout() {
       layouts.forEach(({screen, bar, positions}) => {
-        if (exhibitionDisplay.matches) {
+        if ((screen.classList.contains('st-screen') && landscapeDisplay.matches) || exhibitionDisplay.matches || (screen.classList.contains('dcd-screen') && landscapeDisplay.matches)) {
           positions.forEach(({button, marker}) => marker.after(button));
           bar.remove();
         } else {
@@ -42,6 +43,7 @@
     }
     updateLayout();
     exhibitionDisplay.addEventListener('change', updateLayout, {signal});
+    landscapeDisplay.addEventListener('change', updateLayout, {signal});
   }
   // Local SVGs avoid missing ligatures in subsetted icon fonts when offline.
   function normalizeIcons(root) {
@@ -67,6 +69,17 @@
   function normalizeText(root) {
     let originals = originalTypography.get(root);
     if (!originals) { originals = new Map(); originalTypography.set(root, originals); }
+    const compactDcdLandscape = root.matches('.dcd-screen:not(.dcd-home)')
+      && !!root.querySelector('#carousel')
+      && landscapeDisplay.matches;
+    const landscapeOriginals = landscapeTypography.get(root);
+    if (!compactDcdLandscape && landscapeOriginals) {
+      landscapeOriginals.forEach((properties, element) => properties.forEach(({value, priority}, property) => {
+        if (value) element.style.setProperty(property, value, priority);
+        else element.style.removeProperty(property);
+      }));
+      landscapeTypography.delete(root);
+    }
     if (exhibitionDisplay.matches) {
       originals.forEach((properties, element) => properties.forEach(({value, priority}, property) => {
         if (value) element.style.setProperty(property, value, priority);
@@ -100,6 +113,41 @@
       const height = element.style.lineHeight;
       if (height && Number(height) < 1.2) setStyle(element, 'line-height', '1.25');
     });
+    if (compactDcdLandscape) {
+      let propertiesByElement = landscapeTypography.get(root);
+      if (!propertiesByElement) {
+        propertiesByElement = new Map();
+        landscapeTypography.set(root, propertiesByElement);
+      }
+      function setLandscapeStyle(element, property, value) {
+        let properties = propertiesByElement.get(element);
+        if (!properties) {
+          properties = new Map();
+          propertiesByElement.set(element, properties);
+        }
+        if (!properties.has(property)) properties.set(property, {
+          value: element.style.getPropertyValue(property),
+          priority: element.style.getPropertyPriority(property)
+        });
+        element.style.setProperty(property, value, 'important');
+      }
+      root.querySelectorAll('h1').forEach(element => {
+        setLandscapeStyle(element, 'font-size', 'clamp(22px, 2.3vw, 34px)');
+        setLandscapeStyle(element, 'line-height', '1.15');
+      });
+      root.querySelectorAll('.text-content p').forEach(element => {
+        setLandscapeStyle(element, 'font-size', 'clamp(13px, 1.05vw, 16px)');
+        setLandscapeStyle(element, 'line-height', '1.4');
+      });
+      root.querySelectorAll('#carousel h3').forEach(element => {
+        setLandscapeStyle(element, 'font-size', 'clamp(13px, 1.2vw, 17px)');
+        setLandscapeStyle(element, 'line-height', '1.2');
+      });
+      root.querySelectorAll('#carousel figcaption p').forEach(element => {
+        setLandscapeStyle(element, 'font-size', 'clamp(11px, 0.85vw, 13px)');
+        setLandscapeStyle(element, 'line-height', '1.25');
+      });
+    }
   }
   window.ExhibitionComponents.Responsive = {normalizeText, normalizeIcons, mountControls};
 })();

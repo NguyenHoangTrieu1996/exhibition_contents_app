@@ -60,3 +60,246 @@
 .dcd-screen figcaption{width:100%!important;padding:16px!important}
 @media(max-width:760px){.dcd-screen .pl-12{padding-left:32px!important}.dcd-screen .screen-container>section{gap:24px!important}.dcd-screen .glass-effect{border-radius:16px!important}.dcd-screen .dcd-chapter{border-radius:12px!important}}
 }
+
+@media (orientation: landscape) {
+  .dcd-screen .exhibition-controls {
+    display: none !important;
+  }
+
+  .dcd-screen .dcd-toolbar {
+    position: fixed !important;
+    z-index: 60 !important;
+    right: 16px !important;
+    bottom: max(12px, env(safe-area-inset-bottom)) !important;
+    left: auto !important;
+    top: auto !important;
+    width: auto !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+  }
+
+  .dcd-screen .dcd-toolbar button,
+  .dcd-screen .dcd-footer-button,
+  .dcd-screen.dcd-home main > footer > .dcd-exhibitions-button {
+    min-height: 40px !important;
+    padding: 8px 14px !important;
+    font-size: clamp(13px, 1.15vw, 16px) !important;
+    line-height: 1.3 !important;
+  }
+
+  .dcd-screen .dcd-page-footer {
+    position: fixed !important;
+    z-index: 60 !important;
+    bottom: max(12px, env(safe-area-inset-bottom)) !important;
+    left: 16px !important;
+    right: auto !important;
+    width: auto !important;
+    max-width: calc(50% - 24px) !important;
+    pointer-events: none !important;
+  }
+
+  .dcd-screen:not(.dcd-home) .dcd-page-footer > .dcd-footer-button {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .dcd-screen.dcd-home main > footer > .dcd-exhibitions-button {
+    position: fixed !important;
+    z-index: 60 !important;
+    bottom: max(12px, env(safe-area-inset-bottom)) !important;
+    left: 16px !important;
+    max-width: calc(50% - 24px) !important;
+    margin: 0 !important;
+  }
+
+  .dcd-screen:not(.dcd-home) > section.bg2,
+  .dcd-screen:not(.dcd-home) > section.bg3 {
+    width: 100% !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .dcd-screen:not(.dcd-home) > section.bg2 > main,
+  .dcd-screen:not(.dcd-home) > section.bg3 > main {
+    display: grid !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    grid-template-rows: auto auto minmax(0, 0.5fr) minmax(0, 1.5fr) !important;
+    align-content: stretch !important;
+    gap: 8px !important;
+    margin: 0 !important;
+    padding: 8px 24px 68px !important;
+  }
+
+  .dcd-screen:not(.dcd-home) > section.bg2 > main > div:first-child,
+  .dcd-screen:not(.dcd-home) > section.bg3 > main > div:first-child {
+    justify-content: center !important;
+    height: clamp(44px, 7vh, 68px) !important;
+    margin: 0 !important;
+  }
+
+  .dcd-screen:not(.dcd-home) .witdh-logo {
+    width: clamp(100px, 12vw, 170px) !important;
+    height: 100% !important;
+  }
+
+  .dcd-screen:not(.dcd-home) > section.bg2 > main > header,
+  .dcd-screen:not(.dcd-home) > section.bg3 > main > header {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .dcd-screen:not(.dcd-home) > section.bg2 > main > header h1,
+  .dcd-screen:not(.dcd-home) > section.bg3 > main > header h1 {
+    font-size: clamp(22px, 2.3vw, 34px) !important;
+    line-height: 1.15 !important;
+  }
+
+  .dcd-screen:not(.dcd-home) > section.bg2 > main > header > div,
+  .dcd-screen:not(.dcd-home) > section.bg3 > main > header > div {
+    width: min(28vw, 300px) !important;
+    height: 4px !important;
+    margin: 4px auto 0 !important;
+  }
+
+  .dcd-screen:not(.dcd-home) .text-content {
+    width: 100% !important;
+    min-height: 0 !important;
+    max-height: 100% !important;
+    overflow: auto !important;
+    margin: 0 !important;
+    padding: 4px 10px !important;
+    overscroll-behavior: contain;
+  }
+
+  .dcd-screen:not(.dcd-home) .text-content p {
+    margin: 0 0 8px !important;
+    font-size: clamp(13px, 1.05vw, 16px) !important;
+    line-height: 1.4 !important;
+  }
+
+  .dcd-screen:not(.dcd-home) .text-content p::first-letter {
+    float: none !important;
+    margin: 0 !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+  }
+
+  .dcd-screen:not(.dcd-home) > section.bg2 > main > section:last-child,
+  .dcd-screen:not(.dcd-home) > section.bg3 > main > section:last-child {
+    display: flex !important;
+    min-height: 0 !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+  }
+
+  .dcd-screen:not(.dcd-home) #carousel {
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    flex: 1 1 auto !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  .dcd-screen:not(.dcd-home) #carousel > .carousel-slide {
+    width: clamp(220px, 95vw, 1300px) !important;
+    max-width: calc(100vw - 48px) !important;
+    min-width: 0 !important;
+    height: 100% !important;
+    flex: 0 0 auto !important;
+    scroll-snap-align: center;
+  }
+
+  .dcd-screen:not(.dcd-home) #carousel > .carousel-slide figure {
+    display: grid !important;
+    height: 100% !important;
+    grid-template-rows: minmax(0, 1fr) auto !important;
+    align-items: stretch !important;
+    margin: 0 !important;
+  }
+
+  .dcd-screen:not(.dcd-home) #carousel > .carousel-slide figure:has(> h3) {
+    grid-template-rows: auto minmax(0, 1fr) auto !important;
+  }
+
+  .dcd-screen:not(.dcd-home) #carousel > .carousel-slide h3 {
+    display: -webkit-box !important;
+    max-height: 2.4em !important;
+    overflow: hidden !important;
+    margin: 0 0 4px !important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .dcd-screen:not(.dcd-home) #carousel > .carousel-slide figure > div {
+    width: auto !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    max-height: 100% !important;
+    align-self: center !important;
+    justify-self: center !important;
+    aspect-ratio: 4 / 3 !important;
+    background: rgba(36, 16, 16, 0.18) !important;
+  }
+
+  .dcd-screen:not(.dcd-home) #carousel > .carousel-slide figure > div > img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .dcd-screen:not(.dcd-home) #carousel > .carousel-slide figcaption {
+    width: 100% !important;
+    max-height: 2.6em !important;
+    overflow: hidden !important;
+    margin: 4px 0 0 !important;
+    padding: 0 4px !important;
+  }
+
+  .dcd-screen:not(.dcd-home) #carousel > .carousel-slide figcaption p {
+    line-height: 1.3 !important;
+    display: -webkit-box !important;
+    overflow: hidden !important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .dcd-screen:not(.dcd-home) #carouselIndicators {
+    min-height: 12px !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin: 6px 0 0 !important;
+  }
+
+  .dcd-screen:not(.dcd-home) .indicator-dot,
+  .dcd-screen:not(.dcd-home) .indicator-dot.dcd-active {
+    width: 10px !important;
+    height: 10px !important;
+    flex: 0 0 auto !important;
+  }
+
+  .dcd-screen:not(.dcd-home) .indicator-dot.dcd-active {
+    width: 28px !important;
+  }
+
+  @media (max-height: 500px) {
+    .dcd-screen:not(.dcd-home) > section.bg2 > main,
+    .dcd-screen:not(.dcd-home) > section.bg3 > main {
+      grid-template-rows: auto auto minmax(0, 0.2fr) minmax(0, 1.8fr) !important;
+      padding-bottom: 54px !important;
+    }
+
+    .dcd-screen:not(.dcd-home) > section.bg2 > main > div:first-child,
+    .dcd-screen:not(.dcd-home) > section.bg3 > main > div:first-child {
+      height: clamp(32px, 8vh, 44px) !important;
+    }
+  }
+}
